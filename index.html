@@ -221,7 +221,7 @@
                         layer.addMarker(marker);
                         var scale = new SMap.Control.Scale();
                         mapa.addControl(scale, {left:"8px", bottom:"25px"});
-                        //var msOpt = SMap.MOUSE_PAN | SMap.MOUSE_WHEEL | SMap.MOUSE_ZOOM;
+                        var msOpt = SMap.MOUSE_PAN | SMap.MOUSE_WHEEL | SMap.MOUSE_ZOOM;
                         var mouse = new SMap.Control.Mouse(msOpt);
                         mapa.addControl(mouse);
                         var keyboard = new SMap.Control.Keyboard(SMap.KB_PAN | SMap.KB_ZOOM);
@@ -251,7 +251,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-sm-3 col-3">
-            <img src="img/logo.jpg" class="img-fluid">
+            <img alt="logo" src="img/logo.jpg" class="img-fluid">
           </div>
           <div class="col-md-4 col-sm-9 col-9">
               <h3>Kde a kdy hrajeme <small>(letní čas)</small> <i class="fa fa-map-marker"></i></h3>
