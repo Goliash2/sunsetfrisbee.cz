@@ -96,14 +96,14 @@
             <div>
               <img class="rounded img-fluid" src="img/sekce-zazij/stromovku.jpg" alt="">
               <h4 class="service-heading">Házíme si ve Stromovce</h4>
-              <p class="text-muted">Přes léto si házíme každý týden ve Stromovce. Hrajeme v pondělí od 18.00 na psí louce. Přidat se k nám může každý. Většina našich házečů šla jen tak okolo a zeptala se, jestli si může taky hodit.</p>
+              <p class="text-muted">Přes léto si házíme každý týden ve Stromovce. Hrajeme v pondělí od 18.00. Přidat se k nám může každý. Většina našich házečů šla jen tak okolo a zeptala se, jestli si může taky hodit.</p>
             </div>
           </div>
           <div class="col-md-4 zazij-karta">
             <div>
               <img class="rounded img-fluid" src="img/sekce-zazij/paluf.jpg" alt="">
                 <h4 class="service-heading">Hrajeme turnaje</h4>
-                <p class="text-muted">Házíme si už několik let, ale na turnaje jsme zatím nejezdili. Až loni se akční skupinka vypravila vyzkoušet turnaj v Dobrušce, pak v zimě přišla Fujárna a teď už hrajeme i Paluf (pražskou amatérskou ligu v ultimate frisbee).</p>
+                <p class="text-muted">Házíme si už několik let, ale na turnaje jsme zatím nejezdili. Až loni se akční skupinka vypravila vyzkoušet turnaj v Dobrušce, pak v zimě přišla Fujárna a teď už hrajeme i <a href="https://www.paluf.cz">Paluf</a> (pražskou amatérskou ligu v ultimate frisbee).</p>
             </div>
           </div>
           <div class="col-md-4 zazij-karta">
@@ -198,7 +198,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Kde hrajeme</h2>
-                    <h3 class="section-subheading text-muted">v letní sezóně (teď, platí letní čas) hrajeme ve Stromovce na <a href="https://mapy.cz/s/1vnwE" target="_blank">psí louce</a> každé pondělí od 18h.</h3>
+                    <p class="section-subheading text-muted">V letní sezóně (když platí letní čas) hrajeme ve <a href="https://mapy.cz/s/fatutaboce">Stromovce</a> téměř každé pondělí od 18 h. V zimní sezóně v kryté hale na Proseku ve středu od 19 h.</p>
+                    <p class="section-subheading text-muted mt-0">Pro jistotu někomu z nás předem napiš a ujisti se, že trénink skutečně je.</p>
                 </div>
             </div>
             <div class="row">
@@ -207,12 +208,19 @@
                     <script>Loader.load();</script>
                     <div id="mapa" style="width: 100%; height:600px"></div>
                     <script>
-                        var center = SMap.Coords.fromWGS84(14.4133883, 50.1036700);
+                        // stromovka
+                        var stromovka = SMap.Coords.fromWGS84(14.4154969, 50.1098681);
+                        // nova
+                        var stromovka2 = SMap.Coords.fromWGS84(14.4232731, 50.1151939);
+                        // prosek
+                        var prosek = SMap.Coords.fromWGS84(14.4876144, 50.1203364);
+                        var kde = stromovka2;                       
+                        var center = stromovka2;
                         var mapa = new SMap(JAK.gel("mapa"), center, 15);
                         mapa.addDefaultLayer(SMap.DEF_TURIST).enable();
                         var layer = new SMap.Layer.Marker();
                         mapa.addLayer(layer).enable();
-                        var mCoord = SMap.Coords.fromWGS84(14.4093328,50.1053767);
+                        var mCoord = kde;
                         var mOpt = {
                             anchor: {left:14, top:49},
                             url:SMap.CONFIG.img + "/marker/balloon-3.png"
@@ -255,10 +263,13 @@
           </div>
           <div class="col-md-4 col-sm-9 col-9">
               <h3>Kde a kdy hrajeme <small>(letní čas)</small> <i class="fa fa-map-marker"></i></h3>
-            <p>Pondělí: Stromovka, <a href="https://mapy.cz/s/1vnwE">psí louka</a>, od 18.00</p>
+              <!--PUVODNI <p class="text-muted">Pondělí: <a href="https://mapy.cz/s/davomojuka">Stromovka</a>, od 18.00</p> -->
+              <p>Pondělí: <a href="https://mapy.cz/s/fatutaboce">Stromovka</a>, od 18.00</p>
               <h3 class="text-muted">Kde a kdy hrajeme <small>(zimní čas)</small> <i class="fa fa-map-marker"></i></h3>
-              <p class="text-muted">Pondělí: <a href="https://mapy.cz/s/1bRBr">hala ZŠ Botičská</a>, 20.30-22.00<br>
-                 Středa: <a href="https://mapy.cz/s/3aEHl">hala Sportcentrum Prosek</a>, 20.30-22.00</p>
+              <p class="text-muted">
+                <!-- Pondělí: <a href="https://mapy.cz/s/1bRBr">hala ZŠ Botičská</a>, 20.30-22.00<br> -->
+                Středa: <a href="https://mapy.cz/s/3aEHl">hala Sportcentrum Prosek</a>, 19.00-20.30
+              </p>
           </div>
           <div class="col-md-5 col-sm-12 col-12">
             <h3>Chceš se přidat?</h3>
@@ -271,7 +282,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <p class="copyright">2018 Sunset Frisbee <span class="text-muted">| vytvořil Petr Hnyk</span></p>
+            <p class="copyright">2024 Sunset Frisbee <span class="text-muted">| vytvořil Petr Hnyk</span></p>
           </div>
         </div>
       </div>
