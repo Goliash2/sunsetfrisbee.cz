@@ -11,15 +11,16 @@
     <title>Sunset Frisbee | neformální pražská skupina hrající ultimate frisbee</title>
 
     <!-- Bootstrap core CSS -->
-      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
-      <link href="vendor/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
-       <!-- Google fonts - Roboto Condensed & Roboto-->
-      <link rel="stylesheet" href="fonts/Roboto_Condensed/roboto-condensed.css">
-      <link rel="stylesheet" type="text/css" href="vendor/font-flaticon/flaticon.css">
+    <link href="vendor/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
+    <!-- Google fonts - Roboto Condensed & Roboto-->
+    <link rel="stylesheet" href="fonts/Roboto_Condensed/roboto-condensed.css">
+    <link rel="stylesheet" type="text/css" href="vendor/font-flaticon/flaticon.css">
 
-      <!-- Custom styles for this template -->
+    <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
+
 
   </head>
 
@@ -47,6 +48,7 @@
               </ul>
           </div>
       </div>
+      <div type="button" class="btn btn-primary">Sháníme nové hráčky a hráče</div>
     </nav>
 
     <!-- Header -->
@@ -87,7 +89,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Házíme diskem a baví nás to!</h2>
-            <h3 class="section-subheading text-muted">Hrajeme ultimate frisbee přes léto ve Stromovce a v zimě v hale. V poslední době nás potkáš i na turnajích či mimo Prahu na víkendových soustředění.</h3>
+            <h3 class="section-subheading text-muted">Hrajeme ultimate frisbee přes léto venku v Tróji a v zimě v hale. V poslední době nás potkáš i na turnajích či mimo Prahu na víkendových soustředěních.</h3>
               <p id="log"></p>
           </div>
         </div>
@@ -95,15 +97,15 @@
           <div class="col-md-4 zazij-karta">
             <div>
               <img class="rounded img-fluid" src="img/sekce-zazij/stromovku.jpg" alt="">
-              <h4 class="service-heading">Házíme si ve Stromovce</h4>
-              <p class="text-muted">Přes léto si házíme každý týden ve Stromovce. Hrajeme v pondělí od 18.00. Přidat se k nám může každý. Většina našich házečů šla jen tak okolo a zeptala se, jestli si může taky hodit.</p>
+              <h4 class="service-heading">Trénujeme ve Stromovce</h4>
+              <p class="text-muted">Přes léto trénujeme každý týden v Tróji v pondělí od 18.00. Přidat se k nám může každý. Většina našich házečů šla jen tak okolo a zeptala se, jestli si může taky hodit.</p>
             </div>
           </div>
           <div class="col-md-4 zazij-karta">
             <div>
               <img class="rounded img-fluid" src="img/sekce-zazij/paluf.jpg" alt="">
                 <h4 class="service-heading">Hrajeme turnaje</h4>
-                <p class="text-muted">Házíme si už několik let, ale na turnaje jsme zatím nejezdili. Až loni se akční skupinka vypravila vyzkoušet turnaj v Dobrušce, pak v zimě přišla Fujárna a teď už hrajeme i <a href="https://www.paluf.cz">Paluf</a> (pražskou amatérskou ligu v ultimate frisbee).</p>
+                <p class="text-muted">Házíme si už několik let, hrajeme <a href="https://www.paluf.cz">Paluf</a> (pražskou amatérskou ligu v ultimate frisbee) a pokud je nás dost jezdíme na turnaje ČAUF.</p>
             </div>
           </div>
           <div class="col-md-4 zazij-karta">
@@ -198,57 +200,16 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Kde hrajeme</h2>
-                    <p class="section-subheading text-muted">V letní sezóně (když platí letní čas) hrajeme v <a href="https://mapy.cz/s/fatutaboce">Troji</a> téměř každé pondělí od 18 h. V zimní sezóně v kryté hale na Proseku ve středu od 19 h.</p>
+                    <p class="section-subheading text-muted">V letní sezóně (když platí letní čas) hrajeme v <a href="https://mapy.cz/s/fatutaboce">Troji</a> (T) téměř každé pondělí od 18 h. V zimní sezóně v kryté <a href="https://mapy.cz/s/guseduroru">hale na Proseku</a> (P) ve středu od 19 h.</p>
                     <p class="section-subheading text-muted mt-0">Pro jistotu někomu z nás předem napiš a ujisti se, že trénink skutečně je.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 mapa">
-                    <script src="https://api.mapy.cz/loader.js"></script>
-                    <script>Loader.load();</script>
-                    <div id="mapa" style="width: 100%; height:600px"></div>
-                    <script>
-                        // stromovka
-                        var stromovka = SMap.Coords.fromWGS84(14.4154969, 50.1098681);
-                        // nova
-                        var stromovka2 = SMap.Coords.fromWGS84(14.4232731, 50.1151939);
-                        // prosek
-                        var prosek = SMap.Coords.fromWGS84(14.4876144, 50.1203364);
-                        var kde = stromovka2;                       
-                        var center = stromovka2;
-                        var mapa = new SMap(JAK.gel("mapa"), center, 15);
-                        mapa.addDefaultLayer(SMap.DEF_TURIST).enable();
-                        var layer = new SMap.Layer.Marker();
-                        mapa.addLayer(layer).enable();
-                        var mCoord = kde;
-                        var mOpt = {
-                            anchor: {left:14, top:49},
-                            url:SMap.CONFIG.img + "/marker/balloon-3.png"
-                        };
-                        var marker = new SMap.Marker(mCoord,"MyMarker", mOpt);
-                        layer.addMarker(marker);
-                        var scale = new SMap.Control.Scale();
-                        mapa.addControl(scale, {left:"8px", bottom:"25px"});
-                        var msOpt = SMap.MOUSE_PAN | SMap.MOUSE_WHEEL | SMap.MOUSE_ZOOM;
-                        var mouse = new SMap.Control.Mouse(msOpt);
-                        mapa.addControl(mouse);
-                        var keyboard = new SMap.Control.Keyboard(SMap.KB_PAN | SMap.KB_ZOOM);
-                        mapa.addControl(keyboard);
-                        var selection = new SMap.Control.Selection(2);
-                        mapa.addControl(selection);
-                        var zn = new SMap.Control.ZoomNotification();
-                        mapa.addControl(zn);
-                        var zoomOpt = {showZoomMenu:false};
-                        var zoom = new SMap.Control.Zoom(null,{titles:["Přiblížit", "Oddálit"], showZoomMenu:false});
-                        mapa.addControl(zoom, {right:"2px", top:"10x"});
-                        var lnt = "Zobrazit na Mapy.cz";
-                        var lnd = JAK.mel("a", {href:"https://mapy.cz/s/2t6Wy", target:"_blank", innerHTML:lnt});
-                        lnd.style.cssText = "position:absolute;left:8px; bottom:54px;"+
-                            "display:block; padding:4px 8px; background-color:#fff; border:medium none;"+
-                            "border-radius:3px; box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);"+
-                            "text-decoration:none; color:#6b7580;";
-                        mapa.getContainer().appendChild(lnd);
-                    </script>
+                
+                <div class="col-lg-12 text-center" >
+                  <img src="https://api.mapy.cz/v1/static/map?lon=14.4232731&lat=50.1151939&zoom=16&width=650&height=400&mapset=outdoor&apikey=m_3xmXbp8JohDt5cPeLMSXTIFHHshvHdk01iqXAo3ag&markers=color:red;size:normal;label:T;14.4232731,50.1151939" alt="mapa Trója" class="m-2" />
+
+                  <img src="https://api.mapy.cz/v1/static/map?lon=14.4873406&lat=50.1207306&zoom=16&width=650&height=400&mapset=outdoor&apikey=m_3xmXbp8JohDt5cPeLMSXTIFHHshvHdk01iqXAo3ag&markers=color:red;size:normal;label:P;14.4873406,50.1207306" alt="mapa Prosek" class="m-2" />
                 </div>
             </div>
         </div>
@@ -263,26 +224,23 @@
           </div>
           <div class="col-md-4 col-sm-9 col-9">
               <h3>Kde a kdy hrajeme <small>(letní čas)</small> <i class="fa fa-map-marker"></i></h3>
-              <!--PUVODNI <p class="text-muted">Pondělí: <a href="https://mapy.cz/s/davomojuka">Stromovka</a>, od 18.00</p> -->
               <p>Pondělí: <a href="https://mapy.cz/s/fatutaboce">Troja</a>, od 18.00</p>
               <h3 class="text-muted">Kde a kdy hrajeme <small>(zimní čas)</small> <i class="fa fa-map-marker"></i></h3>
               <p class="text-muted">
-                <!-- Pondělí: <a href="https://mapy.cz/s/1bRBr">hala ZŠ Botičská</a>, 20.30-22.00<br> -->
-                Středa: <a href="https://mapy.cz/s/3aEHl">hala Sportcentrum Prosek</a>, 19.00-20.30
+                Středa: <a href="https://mapy.cz/s/guseduroru">hala Sportcentrum Prosek</a>, 19.00-20.30
               </p>
           </div>
           <div class="col-md-5 col-sm-12 col-12">
             <h3>Chceš se přidat?</h3>
             <p>Stačí přijít na libovolné hraní či trénink a my už tě házet disky naučíme :)</p>
               <h3>Co to stojí?</h3>
-              <p>V létě vůbec nic, házíme si venku jen tak pro radost.<br>
-                 V zimní sezóně se rozpočítává pronájem haly mezi hráče.<br>
+              <p>Minimum, na tréninku se pouze rozpočítává pronájem hřiště nebo haly mezi hráče.<br>
                  Soustředění a turnaje se taky rozpočítávají mezi účastníky.</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <p class="copyright">2024 Sunset Frisbee <span class="text-muted">| vytvořil Petr Hnyk</span></p>
+            <p class="copyright">2025 Sunset Frisbee <span class="text-muted">| vytvořil Petr Hnyk</span></p>
           </div>
         </div>
       </div>
